@@ -7,7 +7,7 @@ header {
   background: v.$navy;
   position: relative;
 
-  ul {
+  .header-box {
     @include m.list-box();
     display:flex;
     padding: 20px;
@@ -39,7 +39,7 @@ main {
   background: v.$red;
   position: relative;
 
-  ul {
+  .main-box {
     @include m.list-box();
     flex-direction: column;
     padding-top: 40px;
