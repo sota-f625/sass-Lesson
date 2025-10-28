@@ -3,6 +3,7 @@
 @mixin list-box() {
   display: flex;
   list-style: none;
+  gap: 10px;
 
   @each $name, $color in zip(v.$classNames, v.$buttonColor) {
   .box-#{$name} {
@@ -14,11 +15,6 @@
 @mixin header-box() {
   height: 40px;
   width: 40px;
-  border: 10px solid v.$white;
-  
-  &:nth-of-type(-n + 2) {
-    border-right: none;
-  }
 }
 
 @mixin main-box() {
