@@ -1,0 +1,56 @@
+@use 'variable' as v;
+@use 'mixin' as m;
+
+header {
+  height: 100px;
+  width: 400px;
+  background: v.$navy;
+  display: flex;
+  justify-content: right;
+
+  .header-box {
+    display:flex;
+    padding: 10px;
+    background-color:v.$white;
+    height: fit-content;
+    margin: 20px 20px 0 0;
+
+    li {
+      @include m.header-box();
+    }
+  }
+}
+
+.middle {
+  display: flex;
+}
+
+.sidebar {
+  width: 150px;
+  background: v.$green;
+}
+
+main {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  background: v.$red;
+
+  .main-box {
+    @include m.list-box();
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    li {
+      @include m.main-box();
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  width: 400px;
+  background: v.$brown;
+}
+

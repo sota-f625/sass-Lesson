@@ -1,0 +1,25 @@
+@use "variable" as v;
+
+@mixin list-box() {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+
+  @each $name, $color in zip(v.$classNames, v.$buttonColor) {
+  .box-#{$name} {
+    background-color: $color;
+  }
+}
+}
+
+@mixin header-box() {
+  height: 40px;
+  width: 40px;
+}
+
+@mixin main-box() {
+  height: 40px;
+  width: 140px;
+  border: 5px solid v.$white;
+}
+
